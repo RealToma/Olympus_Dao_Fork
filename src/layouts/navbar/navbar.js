@@ -32,7 +32,7 @@ const Navbar = () => {
     useEffect(() => {
         const currentWalletState = window.localStorage.getItem("CurrentWalletConnect");
         currentWalletState && activate(walletConnectors[currentWalletState]);
-    }, [])
+    }, [activate,walletConnectors])
 
     return (
         <StyledComponent>
@@ -60,7 +60,7 @@ const StyledComponent = styled(Box)`
 
 const ConnectWalletBtn = styled(Box)`
     display: flex;
-    width: 120px;
+    width: 150px;
     height: 40px;
     justify-content: center;
     align-items: center;

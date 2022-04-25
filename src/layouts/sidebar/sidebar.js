@@ -9,7 +9,7 @@ import { RiBug2Fill, RiMacbookLine, RiGovernmentLine } from 'react-icons/ri';
 import { FaGithub, FaTwitter, FaDiscord, FaMedium } from 'react-icons/fa';
 
 const Sidebar = () => {
-    const { account } = useWeb3React();
+    const { account,active } = useWeb3React();
     return (
         <StyledComponent>
             <MarkImg>
@@ -18,7 +18,7 @@ const Sidebar = () => {
             <MarkLetter>
                 Olympus
             </MarkLetter>
-            <TxtWalletAddress>0x00..0000</TxtWalletAddress>
+            <TxtWalletAddress>{active === true?account.slice(0,6)+"..."+account.slice(-4):"Connect Wallet"}</TxtWalletAddress>
             <LinkList>
                 <EachLink>
                     <RiMacbookLine fontSize={"1.5rem"} />
