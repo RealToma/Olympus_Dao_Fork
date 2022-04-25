@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Box } from '@material-ui/core';
-import Navbar from "./layouts/navbar/navbar";
+import Sidebar from "./layouts/sidebar/sidebar";
 import Content from "./layouts/content/content";
 import { Web3ReactProvider } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
@@ -17,7 +17,9 @@ function App() {
     <>
       <Web3ReactProvider getLibrary={getLibrary}>
         <StyledComponent>
-          <Navbar />
+
+          {/* <Navbar /> */}
+          <Sidebar/>
           <Content />
         </StyledComponent>
       </Web3ReactProvider>
@@ -27,9 +29,8 @@ function App() {
 
 const StyledComponent = styled(Box)`
   display: flex;
-  flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #F9F9F9;
 `
 export default App;
