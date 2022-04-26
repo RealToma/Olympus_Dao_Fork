@@ -50,7 +50,7 @@ const Sidebar = () => {
                 </EachLink>
             </LinkList>
             <ContactList>
-                <Box display={"flex"} width="80%" justifyContent={"space-between"}>
+                <Box display={"flex"} width="200px">
                     <ContactBox><FaGithub /></ContactBox>
                     <ContactBox><FaMedium /></ContactBox>
                     <ContactBox><FaTwitter /></ContactBox>
@@ -70,6 +70,9 @@ const StyledComponent = styled(Box)`
     flex-direction: column;
     align-items: center ;
     background-color: rgb(40,45,58);
+    @media (max-width: 1000px) {
+        display: none;
+    }
 `
 const MarkImg = styled(Box)`
     display: flex;
@@ -130,6 +133,8 @@ const ContactList = styled(Box)`
 
 const ContactBox = styled(Box)`
     display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
     &:hover{
         cursor: pointer;
         color: rgb(249,205,128);

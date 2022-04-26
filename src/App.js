@@ -17,8 +17,6 @@ function App() {
     <>
       <Web3ReactProvider getLibrary={getLibrary}>
         <StyledComponent>
-
-          {/* <Navbar /> */}
           <Sidebar/>
           <Content />
         </StyledComponent>
